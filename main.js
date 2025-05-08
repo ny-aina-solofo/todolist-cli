@@ -1,6 +1,7 @@
 #! usr/bin/env node
 const createTodo = require('./src/createTodo');
 const deleteTodo = require('./src/deleteTodo');
+const displayHelp = require('./src/displayHelp');
 const readTodo = require('./src/readTodo');
 const updateStatus = require('./src/updateStatus');
 const updateTodo = require('./src/updateTodo');
@@ -17,7 +18,11 @@ const mainMenu = () => {
             createTodo(args[1]);
             break;
         case "list":
-            readTodo();
+            if(args.length === 1) {
+                readTodo(null);
+            } else {
+                readTodo(args[1]);
+            } 
             break;
         case "delete":
             if(args.length < 2) {
@@ -55,18 +60,6 @@ const mainMenu = () => {
             displayHelp();
             break;
     }
-}
-
-const displayHelp = () => {
-    console.log(`
-        Usage: todolist [options]
-
-        Options:
-        help                  Show help information
-        add [desc]            Adds task with provided description
-        update [id] [desc]    Updates the description of the task with corresponding id
-        delete [id]           Deletes the task with the provided task id
-  `);
 }
 
 mainMenu();
