@@ -6,20 +6,38 @@ const updateTodo = require('./src/updateTodo');
 
 const args = process.argv.slice(2);
 
-
 const mainMenu = () => {
     switch (args[0]) {
         case "add":
-            createTodo();
+            if(args.length < 2) {
+                console.log("Empty description not accepted.");
+                process.exit(1);
+            }
+            createTodo(args[1]);
             break;
         case "list":
             readTodo();
             break;
         case "delete":
-            deleteTodo();
+            if(args.length < 2) {
+                console.log("Required variable id not provided.");
+                process.exit(1);
+            }
+            deleteTodo(args[1]);
             break;
         case "update":
-            updateTodo();
+            if(args.length < 3) {
+                console.log("Provide both id and description to be updated.");
+                process.exit(1);
+            }
+            updateTodo(args[1], args[2]);
+            break;
+        case "status":
+            if(args.length < 3) {
+                console.log("Provide both id and description to be updated.");
+                process.exit(1);
+            }
+            updateStatus(args[1], args[2]);
             break;
         case "help":
             displayHelp();

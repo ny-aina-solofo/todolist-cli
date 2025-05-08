@@ -1,30 +1,16 @@
 [
   {
-    "id_task": 1746704227619,
-    "libelle": "another test",
-    "status": false,
-    "createdAt": "2025-04-25",
-    "updatedAt": "2025-05-01"
-  },
-  {
-    "id_task": 1746704245923,
+    "id_task": 1,
     "libelle": "test",
-    "status": true,
-    "createdAt": "2025-04-25",
-    "updatedAt": "2025-05-01"
+    "status": "todo",
+    "createdAt": "2025-05-08T13:54:40.210Z",
+    "updatedAt": "2025-05-08T13:54:40.210Z"
   },
   {
-    "id_task": 1746704268483,
-    "libelle": "build app cli",
-    "status": false,
-    "createdAt": "2025-04-25",
-    "updatedAt": "2025-05-01"
-  },
-  {
-    "id_task": 1746704288207,
-    "libelle": "sleeping",
-    "status": false,
-    "createdAt": "2025-04-25",
-    "updatedAt": "2025-05-01"
+    "id_task": 2,
+    "libelle": "new libelle",
+    "status": "todo",
+    "createdAt": "2025-05-08T13:54:48.703Z",
+    "updatedAt": "2025-05-08T13:54:48.703Z"
   }
 ]

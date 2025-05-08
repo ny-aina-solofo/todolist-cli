@@ -39,3 +39,13 @@ task-cli list done
 task-cli list todo
 task-cli list in-progress
 ```
+
+### Propriétés des tâches
+
+Chaque tâche doit avoir les propriétés suivantes:
+
+- `id`: Un identifiant unique pour la tâche
+- `description`: Une brève description de la tâche
+- `status`: L'état d'avancement de la tâche (`todo`, `in-progress`, `done`)
+- `createdAt`: La date et l'heure auxquelles la tâche a été créée
+- `updatedAt`: Date et heure de la dernière mise à jour de la dernière partie

@@ -1,11 +1,11 @@
 const {data,saveTodo} = require('./util');
 
-const updateTodo = ()=> {
-    let id_task = 1746704288207;
-    let newLibelle = "sleeping";
+const updateTodo = (args_1,args_2)=> {
+    const id_task = parseInt(args_1);
+    let newLibelle = args_2;
     const updatedTask = data.map((task) => task.id_task !== id_task ? task : {...task,libelle : newLibelle})
     saveTodo(updatedTask);
-    console.log(`tâche n°${id_task} modifiée !!!`);
+    console.log(`Nom du tâche modifié avec succès (ID : ${id_task})`);
 }
 
 module.exports = updateTodo;
