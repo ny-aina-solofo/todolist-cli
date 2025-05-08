@@ -15,11 +15,12 @@ const DATA_FILE_NAME = "data.json";
 // }
 const data = JSON.parse(fs.readFileSync(DATA_FILE_NAME, 'utf8'));
 
-const saveTodo = () => {
-    fs.writeFileSync(DATA_FILE_NAME, JSON.stringify(data,null,2));
+const saveTodo = (todo) => {
+    fs.writeFileSync(DATA_FILE_NAME, JSON.stringify(todo,null,2));
 };
 
 module.exports = {
     data,
+    DATA_FILE_NAME,
     saveTodo
 };

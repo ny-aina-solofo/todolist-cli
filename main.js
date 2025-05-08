@@ -1,6 +1,8 @@
 #! usr/bin/env node
 const createTodo = require('./src/createTodo');
+const deleteTodo = require('./src/deleteTodo');
 const readTodo = require('./src/readTodo');
+
 const args = process.argv.slice(2);
 
 
@@ -11,6 +13,9 @@ const mainMenu = () => {
             break;
         case "list":
             readTodo();
+            break;
+        case "delete":
+            deleteTodo();
             break;
         case "help":
             displayHelp();
