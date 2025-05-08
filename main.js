@@ -2,6 +2,7 @@
 const createTodo = require('./src/createTodo');
 const deleteTodo = require('./src/deleteTodo');
 const readTodo = require('./src/readTodo');
+const updateTodo = require('./src/updateTodo');
 
 const args = process.argv.slice(2);
 
@@ -16,6 +17,9 @@ const mainMenu = () => {
             break;
         case "delete":
             deleteTodo();
+            break;
+        case "update":
+            updateTodo();
             break;
         case "help":
             displayHelp();
