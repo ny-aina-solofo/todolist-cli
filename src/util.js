@@ -1,4 +1,25 @@
 const fs = require('node:fs');
-const data = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+const DATA_FILE_NAME = "data.json";
+// let data = [
+//     {
+//         id_task : 18,
+//         libelle:"read todo",
+//         status: false,
+//         createdAt:"2025-04-25",
+//         updatedAt:"2025-05-01"
+//     }
+// ];
 
-module.exports = {data};
+// if (!fs.existsSync(DATA_FILE_NAME)) {
+//     fs.writeFileSync(DATA_FILE_NAME, JSON.stringify([]));
+// }
+const data = JSON.parse(fs.readFileSync(DATA_FILE_NAME, 'utf8'));
+
+const saveTodo = () => {
+    fs.writeFileSync(DATA_FILE_NAME, JSON.stringify(data,null,2));
+};
+
+module.exports = {
+    data,
+    saveTodo
+};
