@@ -2,6 +2,7 @@
 const createTodo = require('./src/createTodo');
 const deleteTodo = require('./src/deleteTodo');
 const readTodo = require('./src/readTodo');
+const updateStatus = require('./src/updateStatus');
 const updateTodo = require('./src/updateTodo');
 
 const args = process.argv.slice(2);
@@ -32,12 +33,19 @@ const mainMenu = () => {
             }
             updateTodo(args[1], args[2]);
             break;
-        case "status":
-            if(args.length < 3) {
-                console.log("Provide both id and description to be updated.");
+        case "mark-as-done":
+            if(args.length < 2) {
+                console.log("Provide both id to be updated.");
                 process.exit(1);
             }
-            updateStatus(args[1], args[2]);
+            updateStatus.markAsDone(args[1]);
+            break;
+        case "mark-in-progress":
+            if(args.length < 2) {
+                console.log("Provide both id to be updated.");
+                process.exit(1);
+            }
+            updateStatus.markInProgress(args[1]);
             break;
         case "help":
             displayHelp();

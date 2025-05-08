@@ -9,7 +9,7 @@
   {
     "id_task": 2,
     "libelle": "new libelle",
-    "status": "todo",
+    "status": "in-progress",
     "createdAt": "2025-05-08T13:54:48.703Z",
     "updatedAt": "2025-05-08T13:54:48.703Z"
   }
