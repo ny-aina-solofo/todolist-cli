@@ -1,0 +1,17 @@
+{
+  "name": "todolist-cli",
+  "version": "1.0.0",
+  "description": "task tracker cli app",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "bin": {
+    "todolist": "./main.js"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "ny-aina-solofo",
+  "license": "ISC"
+}
