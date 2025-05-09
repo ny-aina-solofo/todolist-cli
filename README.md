@@ -1,51 +1,42 @@
-# Traqueur des tâches
+#  Todolsit-cli solution
 
-Le traqueur de tâches est un projet utilisé pour suivre et gérer vos tâches en ligne de commande .
+This is a solution to the [Task tracker cli  challenge on roadmap.sh](https://roadmap.sh/projects/task-tracker). 
 &nbsp;
-## Prescriptions
 
-L'application doit s'exécuter à partir de la ligne de commande, accepter les actions et les entrées de l'utilisateur en tant qu'arguments, et stocker les tâches dans un fichier JSON. L'utilisateur doit pouvoir:
+### The challenge
 
-- [ ] Ajouter, mettre à jour et supprimer des tâches
-- [ ] Marquer comme tâche en cours ou en cours
-- [ ] Énumérer toutes les tâches
-- [ ] Énumérer toutes les tâches qui sont effectuées
-- [ ] Énumérer toutes les tâches qui ne sont pas accomplies
-- [ ] Énumérer toutes les tâches en cours
+Users should be able to:
 
+- [x] Add, Update, and Delete tasks
+- [x] Mark a task as in progress or done
+- [x] List all tasks
+- [x] List all tasks that are done
+- [x] List all tasks that are not done
+- [x] List all tasks that are in progress
+&nbsp;
+## Installation instructions:
+1. Clone the github repository to your machine.
+2. Make sure you have node.js and npm installed in your machine.
+3. Run `npm install -g` . from the repository to install the package globally.
+&nbsp;
+## Run  Instructions:
+Run `todolist help`. It'll display the help instructions of using the cli.
+&nbsp;
+### Links
+github : https://github.com/ny-aina-solofo/todolist-cli
+&nbsp;
+## My process
+### Built with
+- Javascripts
+- node.js
+&nbsp;
+### What I learned
+- CLI interface with node.js
+&nbsp;
 
-### Exemple
-
-La liste des commandes et leur utilisation est donnée ci-après:
-
-```
-# Adding a new task
-task-cli add "Buy groceries"
-# Output: Task added successfully (ID: 1)
-
-# Updating and deleting tasks
-task-cli update 1 "Buy groceries and cook dinner"
-task-cli delete 1
-
-# Marking a task as in progress or done
-task-cli mark-in-progress 1
-task-cli mark-done 1
-
-# Listing all tasks
-task-cli list
-
-# Listing tasks by status
-task-cli list done
-task-cli list todo
-task-cli list in-progress
-```
-
-### Propriétés des tâches
-
-Chaque tâche doit avoir les propriétés suivantes:
-
-- `id`: Un identifiant unique pour la tâche
-- `description`: Une brève description de la tâche
-- `status`: L'état d'avancement de la tâche (`todo`, `in-progress`, `done`)
-- `createdAt`: La date et l'heure auxquelles la tâche a été créée
-- `updatedAt`: Date et heure de la dernière mise à jour de la dernière partie
+### Useful resources
+- node.js : https://nodejs.org/en
+&nbsp;
+## Author
+- github : https://github.com/ny-aina-solofo
+&nbsp;
