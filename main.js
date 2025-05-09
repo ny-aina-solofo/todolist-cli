@@ -1,4 +1,4 @@
-#! usr/bin/env node
+#!/usr/bin/env node
 const createTodo = require('./src/createTodo');
 const deleteTodo = require('./src/deleteTodo');
 const displayHelp = require('./src/displayHelp');
