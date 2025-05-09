@@ -12,7 +12,7 @@ const mainMenu = () => {
     switch (args[0]) {
         case "add":
             if(args.length < 2) {
-                console.log("Empty description not accepted.");
+                console.log(" Un libelle vide n'est pas accepté.");
                 process.exit(1);
             }
             createTodo(args[1]);
@@ -26,28 +26,28 @@ const mainMenu = () => {
             break;
         case "delete":
             if(args.length < 2) {
-                console.log("Required variable id not provided.");
+                console.log("Le Variable requis n'est pas fournnis.");
                 process.exit(1);
             }
             deleteTodo(args[1]);
             break;
         case "update":
             if(args.length < 3) {
-                console.log("Provide both id and description to be updated.");
+                console.log("Vous devez fournir un id et un libelle à mettre à jour.");
                 process.exit(1);
             }
             updateTodo(args[1], args[2]);
             break;
         case "mark-as-done":
             if(args.length < 2) {
-                console.log("Provide both id to be updated.");
+                console.log("Vous devez fournir un id à mettre à jour.");
                 process.exit(1);
             }
             updateStatus.markAsDone(args[1]);
             break;
         case "mark-in-progress":
             if(args.length < 2) {
-                console.log("Provide both id to be updated.");
+                console.log("Vous devez fournir un id à mettre à jour.");
                 process.exit(1);
             }
             updateStatus.markInProgress(args[1]);
@@ -56,7 +56,7 @@ const mainMenu = () => {
             displayHelp();
             break;
         default:
-            console.log("Incorrect usage");
+            console.log("Usage incorrecte");
             displayHelp();
             break;
     }
