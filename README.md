@@ -1,4 +1,4 @@
-#  Todolsit-cli solution
+#  Todolist-cli solution
 
 This is a solution to the [Task tracker cli  challenge on roadmap.sh](https://roadmap.sh/projects/task-tracker). 
 &nbsp;
