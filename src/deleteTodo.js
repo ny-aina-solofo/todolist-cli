@@ -4,7 +4,7 @@ const deleteTodo = (args)=> {
     const id_task = parseInt(args);
     const updatedTask = data.filter((task) => task.id_task !== id_task)
     saveTodo(updatedTask);
-    console.log(`Tâche supprimée avec succès (ID : ${id_task})`);
+    console.log(`Task deleted successfully (ID : ${id_task})`);
 }
 
 module.exports = deleteTodo;

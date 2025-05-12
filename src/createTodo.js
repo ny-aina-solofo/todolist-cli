@@ -14,7 +14,7 @@ const createTodo = (args)=> {
     };
     data.push(newTask);
     fs.writeFileSync(DATA_FILE_NAME, JSON.stringify(data,null,2));
-    console.log(`Tâche ajoutée avec succès (ID : ${newTask.id_task})`);
+    console.log(`Task added successfully (ID : ${newTask.id_task})`);
 }
 
 module.exports = createTodo;
